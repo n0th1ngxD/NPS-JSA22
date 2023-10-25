@@ -1,0 +1,51 @@
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    font-size: 26px;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit {
+    width: 100%;
+    height: 10%;
+}
+
+
+.signup {
+    height: 85%;
+    width: 38%;
+    background-color: rgba(255, 255, 255, 0.483);
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.signup a, h6 {
+    font-size: 18px;
+}
+
+.signup h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+input {
+    color: #000000;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 3px;
+}

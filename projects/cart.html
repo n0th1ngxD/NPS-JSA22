@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./all.css" />
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="shortcut icon" href="./img/moonlight.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/c5f82cd56e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="nav" id="home">
+      <a href="./home.html">Trang chủ</a>
+      <a href="./store.html">Cửa hàng</a>
+      <a href="./aboutus.html">Thông tin</a>
+      <div class="selected"><a href="./cart.html">Giỏ hàng</a></div>
+      <div class="signinup">
+        <div class="allbtn">
+          <p class="sign">
+            <a href="./signup.html" class="sign1">Đăng kí </a
+            ><a href="./signin.html" class="sign1"> Đăng nhập</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+
+      <div class="container">
+        <div class="sp">
+          <img class="img-sp" src="./img/sp1.png" alt="Not Found">
+          <div class="infor">
+            <a href="./sp/sp1.html"><h3>Thập cẩm yến sào, gà quay 2 trứng, 230 g</h3></a>
+            <!-- <h4>Giá tiền: 400k</h4> -->
+            <div class="productnumber">
+              <input class="addbtn" id="1" type="button" value="-">
+              <input type="text" value="" class="numberofpro" id="pnb1"></input>
+              <input class="addbtn" id="2" type="button" value="+">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="sp">
+          <img class="img-sp" src="./img/sp2.png" alt="Not Found">
+          <div class="infor">
+            <a href="./sp/sp2.html"><h3>Bánh dẻo nhân trà xanh 200g</h3></a>
+            <!-- <h4>Giá tiền: 400k</h4> -->
+            <div class="productnumber">
+              <input class="addbtn" id="3" type="button" value="-">
+              <input type="text" value="" class="numberofpro" id="pnb2"></input>
+              <input class="addbtn" id="4" type="button" value="+">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="sp">
+          <img class="img-sp" src="./img/sp5.png" alt="Not Found">
+          <div class="infor">
+            <a href="./sp/sp5.html"><h3>Bánh dẻo đậu xanh trứng muối 200g</h3></a>
+            <!-- <h4>Giá tiền: 300k</h4> -->
+            <div class="productnumber">
+              <input class="addbtn" id="5" type="button" value="-">
+              <input type="text" value="" class="numberofpro" id="pnb3"></input>
+              <input class="addbtn" id="6" type="button" value="+">
+            </div>
+          </div>
+        </div>
+        <br>
+        <h4 style="color: #ffffff;">Tổng giá: ∞</h4>
+      </div>
+
+
+    </div>
+    <div class="end">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14894.927307041153!2d105.79510581032713!3d21.04341366701631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1694783056201!5m2!1svi!2s"
+        width="600"
+        height="280"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="contact">
+        <p><i class="fa-solid fa-location-dot"></i> Đường Võ Chí Công</p>
+        <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+        <p><i class="fa-solid fa-envelope"></i> emailadress@domain.com</p>
+        <label for="subscribe">Subscribe</label>
+        <form>
+          <div class="subcribe1">
+            <input
+              type="text"
+              class="text"
+              id="subscribe"
+              placeholder="Email"
+            />
+            <input type="submit" class="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+
+      document.getElementById("pnb1").value = 1;
+      document.getElementById("pnb2").value = 1;
+      document.getElementById("pnb3").value = 1;
+      let upto1 = 1;
+      let upto2 = 1;
+      let upto3 = 1;
+
+
+      document.getElementById("1").addEventListener("click", giam1);
+
+      document.getElementById("2").addEventListener("click", tang1);
+
+      document.getElementById("3").addEventListener("click", giam2);
+
+      document.getElementById("4").addEventListener("click", tang2);
+
+      document.getElementById("5").addEventListener("click", giam3);
+
+      document.getElementById("6").addEventListener("click", tang3);
+
+            function giam1() {
+              document.getElementById("pnb1").value = --upto1;
+            }
+
+            function tang1() {
+              document.getElementById("pnb1").value = ++upto1;
+            }
+
+            function giam2() {
+              document.getElementById("pnb2").value = --upto2;
+            }
+
+            function tang2() {
+              document.getElementById("pnb2").value = ++upto2;
+            }
+
+            function giam3() {
+              document.getElementById("pnb3").value = --upto3;
+            }
+
+            function tang3() {
+              document.getElementById("pnb3").value = ++upto3;
+            }
+    </script>
+  </body>
+</html>

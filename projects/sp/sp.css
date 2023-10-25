@@ -1,0 +1,122 @@
+.spp {
+    display: flex;
+    width: 160vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.in4 {
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75vh;
+}
+
+.number {
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid #000000;
+    border-top: 3px solid #000000;
+    width: 16vh;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    font-size: 26px;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.space {
+    height: 10vh;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 190vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.same {
+    height: 60vh;
+    text-align: center;
+    width: 40%;
+}
+
+.img-sp {
+    width: 80%;
+}
+
+.sp:hover {
+    background-color: rgba(255, 255, 255, 0.201);
+}
+
+.sp {
+    height: 50vh;
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.recommend .sp h6 {
+    font-size: 16px;
+}
+
+.line {
+    text-align: center;
+}
+
+.recommend {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.spp .in4 button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cd5200;
+    border-bottom: 3px solid #ffffff;
+    border-top: 3px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.spp .in4 button:hover {
+    border-bottom: 3px solid #cd5200;
+    border-top: 3px solid #cd5200;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vh;
+}
+
+.back {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 15vh;
+}
+
+.back:hover {
+    background-color: rgba(255, 255, 255, 0.201);
+}
