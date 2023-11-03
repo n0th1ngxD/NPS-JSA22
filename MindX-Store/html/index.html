@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindX Store</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- GG fonts -->
+
+
+
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="upper-navbar">
+            <a href="./index.html">
+                <h1>Mind<span>X</span> Store</h1>
+            </a>
+            <form class="search" method="get" action="./search.html">
+                <input type="text" placeholder="Search for product ..." name="q">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="icons"></div>
+        </div>
+        <!-- navbar duoi -->
+        <div class="lower-navbar" onclick="event.stopPropagation()">
+            <div class="header"></div>
+            <div>
+                <div class="all-categories" tabindex="0">
+                    <span>
+                        <i class="fa-solid fa-align-left"></i>
+                        <span>All Categories</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="category-drops"></div>
+            </div>
+
+            <div class="drop" tabindex="0">
+                <a href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="list">
+                    <a href="#" class="list-child">Electronic</a>
+                    <a href="#" class="list-child">Fashion</a>
+                    <a href="#" class="list-child">Beauty</a>
+                </div>
+            </div>
+
+            <div class="drop" tabindex="0">
+                <a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="list">
+                    <a href="#" class="list-child">Shop pages</a>
+                    <a href="#" class="list-child">Features</a>
+                    <a href="#" class="list-child">Hover style</a>
+                </div>
+            </div>
+
+            <div class="drop" tabindex="0">
+                <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="list">
+                    <a href="#" class="list-child">Shop pages</a>
+                    <a href="#" class="list-child">Categories</a>
+                    <a href="#" class="list-child">Shopping cart</a>
+                    <a href="#" class="list-child">Wishlist</a>
+                    <a href="#" class="list-child">Wish video</a>
+                </div>
+            </div>
+            <div class="drop" tabindex="0">
+                <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="list">
+                    <a href="#" class="list-child">Blog Sandard</a>
+                    <a href="#" class="list-child">Blog Grid</a>
+                </div>
+            </div>
+            <div class="hide"><a href="./contact.html">Contact</a></div>
+        </div>
+        <div class="contact">
+            <i class="fa-solid fa-phone" style="color: var(--primary);"></i>
+            <div>
+                <p>Hotline:</p>
+                <p>+123 456 789</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
