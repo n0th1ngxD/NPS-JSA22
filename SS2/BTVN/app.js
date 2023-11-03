@@ -18,6 +18,8 @@ console.log("I have " + banana[1] + " " + banana[0]);
 
 //2
 
+console.log("");
+
 let fruits = 0;
 let numbers = 1;
 while (fruits <= list.length && numbers <= list.length) {
@@ -30,6 +32,7 @@ while (fruits <= list.length && numbers <= list.length) {
 
 //3
 
+console.log("");
 
 
 var myDog = {
