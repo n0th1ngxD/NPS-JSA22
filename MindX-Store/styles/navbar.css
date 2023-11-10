@@ -1,71 +1,170 @@
-.upper-navbar {
-    font-family: "Jost", sans-serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
+.navbar {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 3px 3px #0000001b;
 }
 
-.navbar {
-    width: 100%;
+.navbar .upper-navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 30px;
+    height: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
+.navbar a h1 {
+    font-weight: normal;
+}
+
+.navbar a h1 span {
+    color: #c00307;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar .icons i {
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.navbar .icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 9999px;
+}
+
+.search {
+    display: flex;
+    align-items: stretch;
+}
+
+.search input {
+    padding: 15px;
+    outline: none;
+    border: 1px solid var(--primary);
+    box-shadow: 0px 0px 3px #d7d7d7;
+    width: 500px;
+    font-size: 16px;
+}
+
+.search button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #d7d7d7;
+    width: 50px;
+    background: var(--primary);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;    
+}
+
+
+
+
+/* lower navbar */
+
 
 .lower-navbar {
-    width: 80%;
+    border-top: 1px solid rgba(1, 15, 28, 0.1);
     display: flex;
-    justify-content: space-around;
 }
 
-.drop {
+.lower-navbar > div {
+    padding: 0 30px;
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
-.contact {
+.lower-navbar > div > div {
     display: flex;
-    height: 10px;
+    height: 50px;
+    gap: 20px;
     align-items: center;
 }
 
-.list {
+.lower-navbar .header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-a {
-    text-decoration: none;
+.lower-navbar .header h1 {
+    font-weight: normal;
+}
+
+.lower-navbar .header span {
+    color: #c00307;
+}
+
+.lower-navbar #close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background: #efefef;
     color: #000000;
 }
 
-.upper-navbar span {
-    color: #c1080c;
+.drop {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.drop:hover > a {
+    color: var(--primary);
+}
+
+.list {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    top: 100%;
+    left: -10%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 3px 3px 6px #808080;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.drop:hover .list {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.list-child {
+    white-space: nowrap;
+    background: #fff;
+    padding: 10px 50px 10px 10px;
+    transition: 0.3s;
+}
+
+.list-child:hover {
+    background: #f8f8f8;
+    color: var(--primary);
 }
 
 .all-categories {
     width: 260px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    background-color: #3d87f7;
+    background: var(--primary);
     color: #ffffff;
-    justify-content: space-between;
-}
-
-.search input {
-    height: 40px;
-    width: 300px;
-    border-radius: 0px;
-    border: #3d87f7 solid 1px;
-}
-
-.search button {
-    height: 45px;
-    width: 45px;
-    border-radius: 0px;
-    border: none;
-    color: #ffffff;
-    background-color: #3d87f7;
+    position: relative;
 }
