@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    transition: 0.1s;
 }
 
 #hightlight {
@@ -51,4 +52,84 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner img {
     height: 580px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.features > div {
+    background: #f6f7f9;
+    padding: 30px 35px;
+    display: flex;
+    gap: 25px;
+}
+
+.features i {
+    width: 30px;
+    font-size: 30px;
+    color: #f8516f;
+}
+
+.features > div > div {
+    font-size: 18px;
+}
+
+.features p {
+    color: #808080;
+    margin-top: 5px;
+}
+
+.features strong {
+    color: #000000
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#products {
+    display: flex;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 3px 3px 3px rgba(97, 97, 97, 0.518)
+}
+
+#products img {
+    width: 200px;
+}
+
+#products button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.cart-action {
+    display: flex;
+    flex-direction: column;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+h6 span strong {
+    color: #3d87f7;
+}
+
+#products p {
+    color: rgb(91, 91, 91);
+}
+
+#products button:hover {
+    background: #3d87f7;
+    color: #fff;
 }
