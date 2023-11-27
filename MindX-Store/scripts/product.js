@@ -9,7 +9,7 @@ for(let key of products) {
             <img src="../assets/${key.image}" alt="xD">
             <div class="cart-action">
               <button><i class="fa-solid fa-cart-shopping"></i></button>
-              <button><i class="fa-solid fa-eye"></i></button>
+              <button><i class="fa-regular fa-eye"></i></button>
               <button><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
