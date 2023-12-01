@@ -155,3 +155,4 @@ const products = [
 ];
 
 localStorage.setItem("categories", JSON.stringify(categories));
+localStorage.setItem("products", JSON.stringify(products));
