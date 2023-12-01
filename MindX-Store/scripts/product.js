@@ -6,7 +6,7 @@ for(let key of getCategories) {
   divCategories.innerHTML += `
   <div class="category-card">
           <a href="">
-            <img src="../assets/${key.image}" alt="hehe">
+            <img src="../assets/categories/${key.image}" alt="hehe">
           </a>
           <div class="category-container">
             <a href="">
@@ -58,18 +58,47 @@ let getProducts = JSON.parse(localStorage.getItem("products"));
 // }
 
 //Render data sp
+let star;
 const divProducts = document.getElementById("products");
 
 for(let key of getProducts) {
+  if(key.stars == 1) {
+    star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>`
+  } else if(key.stars == 2) {
+    star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            `
+  } else if(key.stars == 3) {
+    star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            `
+  } else if(key.stars == 4) {
+    star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            `
+  } else if(key.stars == 5) {
+    star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            <i class="fa-solid fa-star" style="color: #f7bc00"></i>
+            `
+  }
+
   divProducts.innerHTML += `
   <div class="card">
           <div class="image-container">
-            <img src="../assets/${key.image}" alt="xD">
+            <img src="../assets/products/${key.image}" alt="xD">
           </div>
           <div class="container">
             <p>${key.category}</p>
             <h5>${key.name}</h5>
-            <div class="stars"></div>
+            <div class="stars">${
+              star
+            }</div>
             <h6>
               <span>${key.oldPrice}</span>
               <span>${key.newPrice}</span>
