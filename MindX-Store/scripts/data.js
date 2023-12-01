@@ -1,36 +1,33 @@
-//code
-
-
-
-
-
-
-// data
 const categories = [
     {
       id: "headphones",
       name: "Headphones",
       image: "product-cat-1.png",
+      quantity: "3 Products",
     },
     {
       id: "mobile-tablets",
       name: "Mobile Tablets",
       image: "product-cat-2.png",
+      quantity: "9993 Products",
     },
     {
       id: "cpu-heat-pipes",
       name: "CPU Heat Pipes",
       image: "product-cat-3.png",
+      quantity: "5k Products",
     },
     {
       id: "smart-watch",
       name: "Smart Watch",
       image: "product-cat-4.png",
+      quantity: "100000000 Products",
     },
     {
       id: "bluetooth",
       name: "Bluetooth",
       image: "product-cat-5.png",
+      quantity: "999999999999999999 Products",
     },
   ];
   
@@ -156,3 +153,5 @@ const products = [
     category: "Bluetooth",
   },
 ];
+
+localStorage.setItem("categories", JSON.stringify(categories));

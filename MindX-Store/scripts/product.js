@@ -1,4 +1,30 @@
-// console.log(products);
+let getCategories = JSON.parse(localStorage.getItem("categories"));
+console.log("getCategories: ", getCategories);
+
+const divCategories = document.getElementById("categories");
+for(let key of getCategories) {
+  divCategories.innerHTML += `
+  <div class="category-card">
+          <a href="">
+            <img src="assets/${key.image}" alt="hehe">
+          </a>
+          <div class="category-container">
+            <a href="">
+              <h3>${key.name}</h3>
+            </a>
+            <a href="">
+              <h3>${key.quantity}</h3>
+            </a>
+          </div>
+        </div>
+  `
+}
+
+
+
+
+
+
 const divProducts = document.querySelector("#products");
 
 for(let key of products) {

@@ -94,16 +94,23 @@ h1, h2, h3, h4, h5, h6 {
 
 #products {
     display: flex;
+    width: 100%;
+    height: auto;
+    /* justify-content: space-around; */
+}
+
+.card {
+    display: flex;
     border-radius: 10px;
     width: 200px;
     box-shadow: 3px 3px 3px rgba(97, 97, 97, 0.518)
 }
 
-#products img {
+.card img {
     width: 200px;
 }
 
-#products button {
+.card button {
     border: none;
     width: 30px;
     height: 30px;
@@ -125,11 +132,11 @@ h6 span strong {
     color: #3d87f7;
 }
 
-#products p {
+.card p {
     color: rgb(91, 91, 91);
 }
 
-#products button:hover {
+.card button:hover {
     background: #3d87f7;
     color: #fff;
 }
