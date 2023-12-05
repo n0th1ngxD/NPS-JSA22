@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Add to cart" id="addBtn">
+    <script>
+        const add_Btn = document.getElementById("addBtn");
+        add_Btn.addEventListener("click", addFnc);
+        
+        const pro = JSON.parse(localStorage.getItem("products"))[0];
+        
+        let hwId = JSON.parse(localStorage.getItem("products"))[1].id;
+        console.log("hw: ", hwId);
+
+        const product = JSON.parse(localStorage.getItem("products"));
+
+        let cartDt = JSON.parse(localStorage.getItem("cartData"));
+        console.log("cart: ", cartDt);
+        
+        function addFnc() {
+            // cartDt.push(pro.id)
+
+            for(let i = 0; i < cartDt.length; i++) {
+                if(pro.id != cartDt[i] || cartDt == "") {
+                    console.log("yes");
+                    cartDt.push(pro.id);
+
+                    console.log(cartDt);
+                    localStorage.setItem("cartData", JSON.stringify(cartDt));
+                }
+            }
+        }
+
+    </script>
+
+    <script src="/MindX-Store/scripts/data.js"></script>
+</body>
+</html>

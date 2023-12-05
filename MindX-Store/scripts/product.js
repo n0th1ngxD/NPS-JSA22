@@ -91,7 +91,7 @@ for(let key of getProducts) {
   divProducts.innerHTML += `
   <div class="card">
           <div class="image-container">
-            <img src="../assets/products/${key.image}" alt="xD">
+            <a href="./products/${key.src}"><img src="../assets/products/${key.image}" alt="xD"></a>
           </div>
           <div class="container">
             <p>${key.category}</p>
@@ -100,8 +100,8 @@ for(let key of getProducts) {
               star
             }</div>
             <h6>
-              <span>${key.oldPrice}</span>
-              <span>${key.newPrice}</span>
+              <span class="old-price">${key.oldPrice}</span>
+              <span class="new-price">${key.newPrice}</span>
             </h6>
           </div>
         </div>

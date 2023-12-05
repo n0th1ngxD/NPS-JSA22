@@ -101,3 +101,35 @@ h1, h2, h3, h4, h5, h6 {
     /* width: 160px;
     height: 160px; */
 }
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 22%;
+    margin-top: 20px;
+}
+
+.card .image-container img {
+    width: 220px;
+    height: 235px;
+}
+
+.container {
+    border-top: 1px solid #eaebed;
+    padding-top: 10px
+}
+
+.card .old-price {
+    text-decoration: line-through;
+    font-size: smaller;
+}
+
+.card .new-price {
+    font-size: large;
+    color: #3d87f7;
+    font-weight: bold;
+}
