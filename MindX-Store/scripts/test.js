@@ -1,8 +1,7 @@
-let arr = [];
-console.log("arr: ", arr);
-arr.push({
-    a: "a"
-})
+a = 2;
+b = 3;
+c = 4;
 
-console.log(arr);
-
+if(a+b == c || a + c == 6) {
+    console.log("lalal");
+}

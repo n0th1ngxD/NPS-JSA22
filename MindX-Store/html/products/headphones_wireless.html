@@ -24,14 +24,25 @@
         function addFnc() {
             // cartDt.push(pro.id)
 
+            console.log(cartDt.length);
             for(let i = 0; i < cartDt.length; i++) {
-                if(pro.id != cartDt[i] || cartDt == "") {
+                if(pro.id != cartDt[i]) {
                     console.log("yes");
                     cartDt.push(pro.id);
+
 
                     console.log(cartDt);
                     localStorage.setItem("cartData", JSON.stringify(cartDt));
                 }
+            }
+
+            if(cartDt.length == 0) {
+                console.log("yes");
+                cartDt.push(pro.id);
+
+
+                console.log(cartDt);
+                localStorage.setItem("cartData", JSON.stringify(cartDt));
             }
         }
 
