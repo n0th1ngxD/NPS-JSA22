@@ -1,45 +1,122 @@
-const product = JSON.parse(localStorage.getItem("products"));
-const cartDT = JSON.parse(localStorage.getItem("cartData"));
+// not logged in, redirect to login page
 
-console.log(cartDT.length);
+// if (!localStorage.getItem("currentUser")) {
+//     location.href = "../html/login.html"
+// }
 
-const containerDiv = document.getElementById("container");
+subTotal = 0;
+extraFee = 0;
 
-for(let key of cartDT) {
-    if(key.stars == 1) {
-        star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>`
-      } else if(key.stars == 2) {
-        star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                `
-      } else if(key.stars == 3) {
-        star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                `
-      } else if(key.stars == 4) {
-        star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                `
-      } else if(key.stars == 5) {
-        star = `<i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                <i class="fa-solid fa-star" style="color: #f7bc00"></i>
-                `
-      }
-   containerDiv.innerHTML += `
-   <div class="cart">
-        <img src="../assets/products/${key.image}" alt="xD">
-        <h3>${key.name}</h3>
-        <p>${key.category}</p>
-        <span>${key.oldPrice}</span>
-        <span>${key.newPrice}</span>
-        <!-- <p>${key.description}</p> -->
-        <div class="stars">${star}</div>
-    </div>
-   ` 
+function displayCart() {
+    const cart = localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [];
+
+    if(cart.length === 0) {
+        document.getElementById("cart-container").innerHTML = `
+        <h4 class="empty-warning">Your cart is empty</h4>
+        `;
+    }
+    else {
+        document.getElementById("cart-container").innerHTML = `
+        <h2>Shopping Cart</h2>
+        <p>Home * Shopping Cart</p>
+
+        <div>
+            <div style="flex: 1;">
+                <table>
+                    <thread>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th></th>
+                    </thread>
+                    ${cart.map(
+                        (product)=>
+                        `
+                        <tr>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="../assets/products/${product.image}" alt="xD?">
+                                    <p>${product.name}</p>
+                                </div>
+                            </td>
+                            <td>${product.newPrice}</td>
+
+                            <td>
+                                <div class="quantity-cell">
+                                    <button onclick="removeFromCart("${product.id}"); displayCart()">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <span>${product.quantity}</span>
+                                    <button onclick="addToCart("${product.id}"); displayCart()">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <button class="remove-from-cart" onclick="removeFromCart("${product.id}", "all"); diplayCart()>
+                                    <i class="fa-solid fa-x">Remove</i>
+                                </button>
+                            </td>
+                        </tr>
+                        `
+                        ).join("")
+                    }
+                </table>
+
+                <div>
+                    <div class="coupon-code">
+                        <p>Coupon Code: </p>
+                        <div>
+                            <form>
+                                <input type="text" placeholder="Enter Coupon Code"/>
+                                <button>Apply</button>
+                            </form>
+                            <button onclick="localStorage.removeItem("cart"); displayCart()>Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-wrapper">
+                <div class="checkout-top">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$${subTotal}</span>
+                </div>
+                <div class="checkout-shipping">
+                    <h4>Shipping</h4>
+                    <div>
+                        <input type="radio" id="flat_rate" name="shipping" ${extraFee === 20 ? "checked": ""} />
+                        <label for="flat_rate">Flat rate: <span>$20.00</span></label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="local_pickup" name="shipping" ${extraFee === 25 ? "checked": ""} />
+                        <label for="local_pickup">Flat rate: <span>$25.00</span></label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="free_shipping" name="shipping" ${extraFee === 0 ? "checked": ""} />
+                        <label for="free_shipping">Free shipping</label>
+                    </div>
+                </div>
+
+                <div class="checkout">
+                    <span>Total</span><span>$${subTotal + extraFee}</span>
+                </div>
+
+                <div class="checkout-proceed">
+                    <a href="" onclick="alert("Purchased successfully"); localStorage.removeItem("cart"); displayCart();">
+                    Proceed to Checkout</a>
+                </div>
+
+            </div>
+        </div>
+        `
+    }
 }
+
+
+displayCart();

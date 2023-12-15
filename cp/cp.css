@@ -1,0 +1,41 @@
+body {
+    background-image: url("https://wallpapercosmos.com/w/full/f/e/a/1234782-3840x2160-desktop-4k-grass-pokemon-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+
+#search {
+    height: 30px;
+    text-align: center;
+    border: none;
+    background: none;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.i4 div img {
+    width: 200px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
