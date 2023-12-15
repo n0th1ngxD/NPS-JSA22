@@ -1,3 +1,7 @@
+* {
+    transition: 0.2s;
+}
+
 body {
     background-image: url("https://wallpapercosmos.com/w/full/f/e/a/1234782-3840x2160-desktop-4k-grass-pokemon-background.jpg");
     background-repeat: no-repeat;
@@ -16,6 +20,11 @@ h3 {
     border-bottom: 2px solid #000000;
 }
 
+h3:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
 #search {
     height: 30px;
     text-align: center;
@@ -25,12 +34,25 @@ h3 {
     border-bottom: 2px solid #000000;
 }
 
+#search:hover {
+    color: #ffffff;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
 .i4 div img {
     width: 200px;
     border-top: 2px solid #000000;
     border-bottom: 2px solid #000000;
     border-left: 2px solid #000000;
     border-right: 2px solid #000000;
+}
+
+.i4 div img:hover {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
 }
 
 .main {
